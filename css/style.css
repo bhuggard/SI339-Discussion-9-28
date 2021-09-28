@@ -27,6 +27,7 @@ It should have 7 rows of 300px
     width: 90vw;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 300);
+    margin: auto;
 }
 
 /* CHECKPOINT - 
@@ -67,10 +68,15 @@ row smaller? */
     Change the background color of the body. 
     This is a quick check that your media query is correct.
     */
-   
+   body{
+       background-color: greenyellow;
+   }
 
     /* REQUIREMENTS:
     Change the grid to two responsive fractional columns.*/
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
    
 
     /* CHECKPOINT?
@@ -83,18 +89,20 @@ row smaller? */
     Uncomment the img selector values below.  */
     
     img{
-        /* width:; */
-        /* height:; */
-        /* object-fit: ; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         /* object-fit: Try fill and cover; */
     }
 
     .img-three,.img-six,.img-nine, footer{
+        grid-column: 1/-1;
     }
 
     /* REQUIREMENTS - Make sure the footer is 
     in the vertical center. */
     footer{
+        align-self: center;
     }
 }
 
@@ -104,6 +112,10 @@ row smaller? */
     Change the h1 to uppercase, this is a quick
     check that your media query is correct.
     */
+    h1{
+        text-transform: uppercase;
+
+    }
 
 
     /* REQUIREMENTS:
@@ -111,25 +123,33 @@ row smaller? */
         - four equal columns.
         - first five rows are 375px, last one is 250px;
     */
-     
+     .container{
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         grid-template-rows: repeat(5, 375px) 250px;
+     }
 
     /* REQUIREMENTS:
     Change the object-fit to match or example. 
      */
     img{
-        /* object-fit: Try fill and cover; */
+        object-fit: cover;
     }
 
     /* MOVE Green leafy image to match example */
     .img-one{
-       
+       grid-column: 1 / span 2;
+       grid-row: 1/ span 2;
     }
 
     .img-two{
+        grid-column: 3/ span 4;
+        grid-row: 1/ span 2;
         
     }
 
     .img-three{
+        grid-column: 1/-1;
+        grid-row: 3/span 4;
         
     }
 
@@ -162,6 +182,8 @@ row smaller? */
     of its row. */
 
     footer{
+        align-self: end;
+
     }
 
 }
