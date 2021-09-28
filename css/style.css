@@ -37,7 +37,7 @@ HOW DOES IT LOOK?  DOES THE GRID EXIST?
 /* REQUIREMENTS:  Images shouldn't show outside 
 the divs */
 .container > div{
-    
+    overflow: hidden;
 } 
 
 /* LEAVE FOOTER ALONE */
